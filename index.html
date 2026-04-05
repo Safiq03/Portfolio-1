@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S Mohammed Safiq Nishar | Full Stack App Developer</title>
-    <meta name="description" content="Portfolio of S Mohammed Safiq Nishar - Full Stack App Developer and Cyber Security Enthusiast. Expert in Flutter, Dart, Kotlin, and Web Technologies.">
+    <meta name="description"
+        content="Portfolio of S Mohammed Safiq Nishar - Full Stack App Developer and Cyber Security Enthusiast. Expert in Flutter, Dart, Kotlin, and Web Technologies.">
     <link rel="stylesheet" href="style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Safiq Nishar</a>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="mobile-menu-btn">
+            <a href="#home" class="logo">Safiq<span
+                    style="font-weight: 400; color: var(--text-primary);">Nishar</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menu-btn" style="display: none;">
                 <i data-lucide="menu"></i>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - High-Impact First Impression -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-greeting">Hi, I'm Safiq! 👋</span>
-                <h1 class="hero-name">Full Stack App Developer & Cyber Security Enthusiast</h1>
-                <p class="hero-tagline">Building Secure, Scalable, and User-Friendly Applications.</p>
+                <div class="hero-greeting">
+                    <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+                    <span>Open to new opportunities</span>
+                </div>
+                <h1 class="hero-name">S Mohammed <span class="text-gradient">Safiq Nishar</span></h1>
+                <p class="hero-tagline">Full Stack Developer & Cyber Security Enthusiast</p>
                 <p class="hero-bio">
-                    A passionate developer with expertise in various programming languages and frameworks. 
-                    I solve complex problems with innovative solutions, focusing on mobile development and high-security standards.
+                    Dedicated to building secure, high-performance digital experiences.
+                    Specializing in end-to-end mobile development with Flutter and robust full-stack web architectures
+                    engineered with a security-first mindset.
                 </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">Check Out My Work <i data-lucide="arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <div class="cta-buttons" style="display: flex; gap: 1.5rem; margin-top: 3rem;">
+                    <a href="#projects" class="btn btn-primary">
+                        View Case Studies
+                        <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Let's Talk
+                        <i data-lucide="message-square" style="width: 18px; height: 18px;"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -50,71 +64,85 @@
     <!-- Skills Section -->
     <section class="section" id="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i data-lucide="smartphone" class="skill-icon"></i>
-                    <p class="skill-name">Flutter</p>
+            <h2 class="section-title">Technical Expertise</h2>
+
+            <div class="skills-categories">
+                <!-- Mobile Development -->
+                <div class="skills-category-group">
+                    <h3 class="category-header"><i data-lucide="smartphone"></i> Mobile Development</h3>
+                    <div class="category-grid">
+                        <div class="skill-item">Flutter</div>
+                        <div class="skill-item">Dart</div>
+                        <div class="skill-item">Android / iOS</div>
+                        <div class="skill-item">Swift / Kotlin</div>
+                        <div class="skill-item">React Native</div>
+                        <div class="skill-item">Flutterflow</div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="code-2" class="skill-icon"></i>
-                    <p class="skill-name">Dart</p>
+
+                <!-- Web & Full-Stack -->
+                <div class="skills-category-group">
+                    <h3 class="category-header"><i data-lucide="globe"></i> Web & Full-Stack</h3>
+                    <div class="category-grid">
+                        <div class="skill-item">React.js</div>
+                        <div class="skill-item">TypeScript / JS</div>
+                        <div class="skill-item">HTML5 / CSS3</div>
+                        <div class="skill-item">REST APIs</div>
+                        <div class="skill-item">PostgreSQL / SQL</div>
+                        <div class="skill-item">Webflow / Design</div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="code" class="skill-icon"></i>
-                    <p class="skill-name">Java</p>
+
+                <!-- Cybersecurity & Programming -->
+                <div class="skills-category-group">
+                    <h3 class="category-header"><i data-lucide="shield-check"></i> Cyber & Programming</h3>
+                    <div class="category-grid">
+                        <div class="skill-item">Cybersecurity</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">C++</div>
+                        <div class="skill-item">Firebase</div>
+                        <div class="skill-item">Full-Stack Dev</div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="layers" class="skill-icon"></i>
-                    <p class="skill-name">Kotlin</p>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="shield-check" class="skill-icon"></i>
-                    <p class="skill-name">Firebase</p>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="database" class="skill-icon"></i>
-                    <p class="skill-name">REST API</p>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="terminal" class="skill-icon"></i>
-                    <p class="skill-name">Python</p>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="layout" class="skill-icon"></i>
-                    <p class="skill-name">Web Dev</p>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="cpu" class="skill-icon"></i>
-                    <p class="skill-name">C++</p>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="shield-alert" class="skill-icon"></i>
-                    <p class="skill-name">Cyber Security</p>
+
+                <!-- Creative Tools -->
+                <div class="skills-category-group">
+                    <h3 class="category-header"><i data-lucide="layers"></i> Creative & Specialized</h3>
+                    <div class="category-grid">
+                        <div class="skill-item">Video Editing</div>
+                        <div class="skill-item">Premiere Pro / AE</div>
+                        <div class="skill-item">DaVinci Resolve</div>
+                        <div class="skill-item">Digital Marketing</div>
+                        <div class="skill-item">Technical Support</div>
+                        <div class="skill-item">Web Applications</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="section section-secondary" id="projects" style="background-color: var(--bg-secondary);">
+    <section class="section" id="projects" style="background-color: var(--bg-secondary);">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title">Case Studies</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <article class="project-card">
                     <div class="project-img">
-                        <i data-lucide="lock" style="width: 64px; height: 64px;"></i>
+                        <i data-lucide="lock"></i>
                     </div>
                     <div class="project-info">
                         <div class="project-tech">
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">Biometrics</span>
+                            <span class="tech-tag">Mobile</span>
+                            <span class="tech-tag">Security</span>
                         </div>
                         <h3 class="project-title">Multi-Factor Auth App</h3>
-                        <p class="project-desc">A high-security Android app locker featuring dual-factor authentication using PIN and fingerprint recognition.</p>
+                        <p class="project-desc">A professional-grade Android security application implementing
+                            dual-layered protection with biometric verification and encrypted PIN management.</p>
                         <div class="project-links">
-                            <a href="https://github.com/Safiq03/MFA-and-Fingerprint-Lock" target="_blank" class="project-link" title="GitHub Source"><i data-lucide="github"></i></a>
+                            <a href="https://github.com/Safiq03/MFA-and-Fingerprint-Lock" target="_blank"
+                                class="project-link" title="Source Code"><i data-lucide="github"></i></a>
                             <a href="#" class="project-link" title="Live Demo"><i data-lucide="external-link"></i></a>
                         </div>
                     </div>
@@ -123,17 +151,19 @@
                 <!-- Project 2 -->
                 <article class="project-card">
                     <div class="project-img">
-                        <i data-lucide="coins" style="width: 64px; height: 64px;"></i>
+                        <i data-lucide="coins"></i>
                     </div>
                     <div class="project-info">
                         <div class="project-tech">
                             <span class="tech-tag">Kotlin</span>
-                            <span class="tech-tag">Game Design</span>
+                            <span class="tech-tag">UX Design</span>
                         </div>
                         <h3 class="project-title">Coin Clicker Game</h3>
-                        <p class="project-desc">Interactive Android game built with Kotlin. Features smooth mechanics, falling coin generation, and score tracking systems.</p>
+                        <p class="project-desc">A highly performant idle-clicker mobile game built natively with Kotlin,
+                            featuring custom physics-based animations and scalable persistence modules.</p>
                         <div class="project-links">
-                            <a href="https://github.com/Safiq03/CoinClicker" target="_blank" class="project-link" title="GitHub Source"><i data-lucide="github"></i></a>
+                            <a href="https://github.com/Safiq03/CoinClicker" target="_blank" class="project-link"
+                                title="Source Code"><i data-lucide="github"></i></a>
                             <a href="#" class="project-link" title="Live Demo"><i data-lucide="external-link"></i></a>
                         </div>
                     </div>
@@ -142,18 +172,21 @@
                 <!-- Project 3 -->
                 <article class="project-card">
                     <div class="project-img">
-                        <i data-lucide="shield-alert" style="width: 64px; height: 64px;"></i>
+                        <i data-lucide="shield-alert"></i>
                     </div>
                     <div class="project-info">
                         <div class="project-tech">
+                            <span class="tech-tag">Threat Intel</span>
                             <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Cybersecurity</span>
                         </div>
-                        <h3 class="project-title">Dark Web Exposure Tracker</h3>
-                        <p class="project-desc">A powerful mobile application designed to scan email IDs for potential data breaches originating from the dark web. Provides real-time alerts and actionable security insights.</p>
+                        <h3 class="project-title">Dark Web Presence Tracker</h3>
+                        <p class="project-desc">An advanced OSINT tool designed to scan dark net repositories for
+                            compromised credentials, providing real-time data exposure alerts.</p>
                         <div class="project-links">
-                            <a href="https://github.com/Safiq03/Dark-Web-Exposure-Tracker-App-Flutter" target="_blank" class="project-link" title="GitHub Source"><i data-lucide="github"></i></a>
-                            <a href="#" class="project-link" title="Live Demo"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/Safiq03/Dark-Web-Exposure-Tracker-App-Flutter" target="_blank"
+                                class="project-link" title="Source Code"><i data-lucide="github"></i></a>
+                            <a href="#" class="project-link" title="Project Details"><i
+                                    data-lucide="external-link"></i></a>
                         </div>
                     </div>
                 </article>
@@ -161,17 +194,19 @@
                 <!-- Project 4 -->
                 <article class="project-card">
                     <div class="project-img">
-                        <i data-lucide="monitor" style="width: 64px; height: 64px;"></i>
+                        <i data-lucide="monitor"></i>
                     </div>
                     <div class="project-info">
                         <div class="project-tech">
-                            <span class="tech-tag">B2B E-commerce</span>
-                            <span class="tech-tag">Web Design</span>
+                            <span class="tech-tag">Enterprise</span>
+                            <span class="tech-tag">B2B</span>
                         </div>
                         <h3 class="project-title">Nutpa Electronics</h3>
-                        <p class="project-desc">A comprehensive B2B IT hardware procurement platform designed for enterprise clients, featuring a modern UI and streamlined sourcing workflows.</p>
+                        <p class="project-desc">A comprehensive B2B procurement ecosystem for enterprise IT hardware,
+                            optimized for high-conversion corporate workflows and inventory tracking.</p>
                         <div class="project-links">
-                            <a href="https://www.nutpa.in/" target="_blank" class="project-link" title="Live Website"><i data-lucide="external-link"></i></a>
+                            <a href="https://www.nutpa.in/" target="_blank" class="project-link" title="Live Website"><i
+                                    data-lucide="external-link"></i></a>
                         </div>
                     </div>
                 </article>
@@ -185,76 +220,72 @@
             <h2 class="section-title">Academic Journey</h2>
             <div class="education-timeline">
                 <div class="timeline-item">
-                    <p class="edu-year">2023 - 2025</p>
-                    <h3 class="edu-degree">Master of Science (M.Sc.) – Cyber Security</h3>
+                    <span class="edu-year">2023 - 2025</span>
+                    <h3 class="edu-degree">M.Sc. Cyber Security</h3>
                     <p class="edu-inst">Manonmaniam Sundaranar University, Tirunelveli</p>
-                    <p class="edu-score" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--primary); font-weight: 600;">Grade: 7.37 CGPA (FIRST CLASS)</p>
+                    <p style="margin-top: 1rem; font-weight: 700; color: var(--primary);">7.37 CGPA | First Class</p>
                 </div>
                 <div class="timeline-item">
-                    <p class="edu-year">2020 - 2023</p>
-                    <h3 class="edu-degree">Bachelor of Science (B.Sc.) – Information Technology</h3>
-                    <p class="edu-inst">Jamal Mohamed College (Autonomous), Bharathidasan University, Trichy</p>
-                    <p class="edu-score" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--primary); font-weight: 600;">Grade: 78.0% (Distinction)</p>
+                    <span class="edu-year">2020 - 2023</span>
+                    <h3 class="edu-degree">B.Sc. Information Technology</h3>
+                    <p class="edu-inst">Jamal Mohamed College, Trichy</p>
+                    <p style="margin-top: 1rem; font-weight: 700; color: var(--primary);">78.0% | Distinction</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact" style="background-color: var(--bg-secondary);">
+    <section class="section" id="contact" style="background-color: var(--bg-main);">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
                 <div class="contact-left">
-                    <h3>Let's collaborate on your next project.</h3>
-                    <p style="margin: 1.5rem 0; color: var(--text-secondary);">Currently open to Full Stack and App Development roles, as well as Cyber Security projects.</p>
-                    
-                    <div class="contact-info-list">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i data-lucide="mail"></i></div>
-                            <div class="contact-text">
-                                <h4>Email Me</h4>
-                                <p>safiqnishar03@gmail.com</p>
-                            </div>
+                    <h2 style="font-size: 2.75rem; font-weight: 800; margin-bottom: 1.5rem;">Let's Build <span
+                            class="text-gradient">Something.</span></h2>
+                    <p
+                        style="color: var(--text-secondary); margin-bottom: 3.5rem; font-size: 1.15rem; line-height: 1.8;">
+                        Currently exploring full-stack engineering and cybersecurity roles.
+                        If you're looking for a developer who prioritizes security and performance, let's connect.
+                    </p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="mail"></i></div>
+                        <div class="contact-text">
+                            <h4>Email Professional</h4>
+                            <p>safiqnishar03@gmail.com</p>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i data-lucide="phone"></i></div>
-                            <div class="contact-text">
-                                <h4>Call Me</h4>
-                                <p>+91-8754040131</p>
-                            </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="phone"></i></div>
+                        <div class="contact-text">
+                            <h4>Direct Line</h4>
+                            <p>+91 87540 40131</p>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Tamil Nadu, India</p>
-                            </div>
-                        </div>
-                        <div class="contact-item" style="margin-top: 2rem;">
-                            <a href="https://linkedin.com/in/safiqnis6/" target="_blank" class="project-link" style="margin-right: 1.5rem;"><i data-lucide="linkedin"></i></a>
-                            <a href="https://github.com/Safiq03" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Trichy, Tamil Nadu, India</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="contact-right">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="How can I help you?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message <i data-lucide="send"></i></button>
-                    </form>
-                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Professional Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Project details or inquiry..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+                        Send Inquiry
+                        <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -262,7 +293,19 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 S Mohammed Safiq Nishar. Designed with passion for excellence.</p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                <a href="#home" class="logo" style="font-size: 2.5rem;">Safiq<span
+                        style="font-weight: 400; color: var(--text-primary);">Nishar</span></a>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="https://github.com/Safiq03" target="_blank" class="project-link"
+                        style="font-size: 1.75rem;"><i data-lucide="github"></i></a>
+                    <a href="https://linkedin.com/in/safiqnis6" target="_blank" class="project-link"
+                        style="font-size: 1.75rem;"><i data-lucide="linkedin"></i></a>
+                </div>
+                <p style="color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
+                    &copy; 2026 S Mohammed Safiq Nishar. Engineered for Performance.
+                </p>
+            </div>
         </div>
     </footer>
 
@@ -270,6 +313,17 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
+
 </html>
