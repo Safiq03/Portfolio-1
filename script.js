@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 });
 
-// Handle simple form submission feedback
+// Handle Formspree submission seamlessly
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = contactForm.querySelector('button');
         const originalText = btn.innerHTML;
@@ -63,18 +63,36 @@ if (contactForm) {
         btn.innerHTML = 'Sending... <i data-lucide="loader"></i>';
         lucide.createIcons();
         
-        setTimeout(() => {
-            btn.innerHTML = 'Message Sent! <i data-lucide="check"></i>';
-            btn.style.background = '#10b981';
-            lucide.createIcons();
-            contactForm.reset();
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = 'var(--primary)';
+            if (response.ok) {
+                btn.innerHTML = 'Message Sent! <i data-lucide="check"></i>';
+                btn.style.background = '#10b981';
                 lucide.createIcons();
-            }, 3000);
-        }, 1500);
+                contactForm.reset();
+            } else {
+                btn.innerHTML = 'Failed to Send <i data-lucide="alert-circle"></i>';
+                btn.style.background = '#ef4444';
+                lucide.createIcons();
+            }
+        } catch (error) {
+            btn.innerHTML = 'Network Error <i data-lucide="wifi-off"></i>';
+            btn.style.background = '#ef4444';
+            lucide.createIcons();
+        }
+        
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = 'var(--primary)';
+            lucide.createIcons();
+        }, 4000);
     });
 }
 
@@ -93,3 +111,27 @@ headStyle.innerHTML = `
     }
 `;
 document.head.appendChild(headStyle);
+
+// Certificate Modal Logic
+function openCert(imgPath) {
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('modalImg');
+    
+    if (modal && modalImg) {
+        modalImg.src = imgPath;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+        lucide.createIcons(); // Refresh icons inside modal
+    }
+}
+
+function closeCert() {
+    const modal = document.getElementById('certModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scroll
+    }
+}
+
+// Initializing Icons
+lucide.createIcons();
